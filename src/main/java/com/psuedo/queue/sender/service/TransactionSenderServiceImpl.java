@@ -12,9 +12,12 @@ public class TransactionSenderServiceImpl implements TransactionSenderService{
     @Autowired
     TransactionEncrypter transactionEncrypter;
 
+    @Autowired
+    FakeQueueService fakeQueueService;
+
     @Override
     public ResponseEntity<String> addTransaction(Transaction transaction) {
         String encryptedValue = transactionEncrypter.encryptTransaction(transaction);
-        return ResponseEntity.ok(encryptedValue);
+        return fakeQueueService.addToQueue(encryptedValue);
     }
 }
