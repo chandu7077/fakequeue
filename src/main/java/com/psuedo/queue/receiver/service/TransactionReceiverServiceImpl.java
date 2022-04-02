@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TransactionReceiverServiceImpl implements TransactionReceiverService{
 
@@ -27,5 +29,10 @@ public class TransactionReceiverServiceImpl implements TransactionReceiverServic
             e.printStackTrace();
         }
         return ResponseEntity.ok("Application error");
+    }
+
+    @Override
+    public List<Transaction> fetchAllTransactions() {
+        return transactionRepository.findAll();
     }
 }

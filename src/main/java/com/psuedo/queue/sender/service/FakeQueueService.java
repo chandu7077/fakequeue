@@ -16,7 +16,7 @@ public class FakeQueueService {
     @Autowired
     RestTemplate restTemplate;
 
-    @Value("${heroku.receiverURL}")
+    @Value("${transaction.receiver.url}")
     private String receiverURL;
 
     public ResponseEntity<String> addToQueue(String encryptedTransaction) {
