@@ -43,6 +43,10 @@ Heroku URL: [https://murmuring-ocean-87585.herokuapp.com/](https://murmuring-oce
     - Response
         Transaction Saved Successfully
 
+###### [GET]  /transaction/receive
+
+[GET ALL TRANSACTIONS](https://murmuring-ocean-87585.herokuapp.com/transaction/receive)
+
 ## HEROKU URL
 
 [https://murmuring-ocean-87585.herokuapp.com/](https://murmuring-ocean-87585.herokuapp.com/)
